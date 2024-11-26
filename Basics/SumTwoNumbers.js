@@ -17,6 +17,7 @@ rl.question('Enter the first number: ', (num1) => {
             console.log(`The sum of ${num1} and ${num2} is ${result}.`)
         }
     })
+
+    rl.close()
 })
 
-rl.close()
