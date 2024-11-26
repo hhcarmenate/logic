@@ -13,9 +13,9 @@ const askQuestion = (question) => {
 
 (async function main() { 
     try {
-        const numb1 = parseFloat(num1)
-        const numb2 = parseFloat(num2)
-        const numb3 = parseFloat(num3)
+        const numb1 = await askQuestion('Enter the first number: ')
+        const numb2 = await askQuestion('Enter the second number: ')
+        const numb3 = await askQuestion('Enter the last number: ')
 
         if (isNaN(numb1) || isNaN(numb2) || isNaN(numb3)) {
             console.log('Invalid input. Please enter valid numbers.');
@@ -42,33 +42,4 @@ const askQuestion = (question) => {
     } finally {
         rl.close()
     }
-})
-
-
-rl.question('Enter the first number: ', (num1) => { 
-    rl.question('Enter the second number: ', (num2) => { 
-        rl.question('Enter the last number: ', (num3) => { 
-            const numb1 = parseFloat(num1)
-            const numb2 = parseFloat(num2)
-            const numb3 = parseFloat(num3)
-
-            let greater = numb1
-            let option = 'First'
-
-            if (greater < numb2) { 
-                greater = numb2
-                option = 'Second'
-            }
-
-            if (greater < numb3) { 
-                greater = numb3
-                option = 'Third'
-            }
-
-            console.log(`The greater number is ${greater} and is the ${option} option`)
-            rl.close()
-
-        })
-    })
-})
-
+})()
