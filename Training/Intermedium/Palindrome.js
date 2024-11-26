@@ -6,7 +6,7 @@ const rl = readline.createInterface({
 })
 
 
-rl.question('Enter the string to invert: ', (chain) => { 
+rl.question('Enter the string to check palindrome: ', (chain) => { 
     if (!chain.trim()) {
         console.log('The input string is empty or contains only whitespace.');
         rl.close();
