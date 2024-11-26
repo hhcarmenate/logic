@@ -18,3 +18,5 @@ rl.question('Enter the first number: ', (num1) => {
         }
     })
 })
+
+rl.close()

@@ -20,5 +20,3 @@ rl.question('Enter the number: ', (num) => {
 
     console.log('The number is odd.')
 })
-
-rl.close()
